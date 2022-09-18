@@ -4,9 +4,9 @@ class Solution {
         if(x == 0){
           return true;
       }
-        else if(x < 0 || x % 10==0){
+       if(x < 0 || x % 10==0){
             return false;
-        }
+      }
         int rev = 0;
         while(x>rev){
             rev = rev * 10 + x % 10;
