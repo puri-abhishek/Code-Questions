@@ -14,7 +14,7 @@ class Solution {
         }
         if(x == rev || x == rev / 10){
             return true;
-        } 
+        }
         else {
             return false;
         }
