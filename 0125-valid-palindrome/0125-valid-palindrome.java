@@ -1,20 +1,21 @@
-/* failed attempt(check again later)
+
 class Solution {
     public boolean isPalindrome(String s) {
-        s.toLowerCase();
-        s = s.replaceAll("^[a-zA-Z]", "");
+        s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         StringBuilder S = new StringBuilder();
         S.append(s);
-        S.reverse();
-        if(S.equals(s))
+        String x = S.reverse().toString().toLowerCase();
+        System.out.println(x.getClass());
+        System.out.println(s.getClass());
+        if(x.equals(s))
             return true;
         else
             return false;
     }
 }
-*/
 
-class Solution {
+
+/* class Solution {
     public boolean isPalindrome(String s) {
         int i=0;
         int j = s.length()-1;
@@ -39,4 +40,4 @@ class Solution {
         }
         return true;
     }
-}
+}*/
