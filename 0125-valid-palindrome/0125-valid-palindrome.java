@@ -19,19 +19,19 @@ class Solution {
         int i=0;
         int j = s.length()-1;
         while(i<j){
-            Character start = s.charAt(i);
-            Character end = s.charAt(j);
+            Character first = s.charAt(i);
+            Character last = s.charAt(j);
 
-            if(!Character.isLetterOrDigit(start)){
+            if(!Character.isLetterOrDigit(first)){
                 i++;
                 continue;
             }
-            if(!Character.isLetterOrDigit(end)){
+            if(!Character.isLetterOrDigit(last)){
                 j--;
                 continue;
             }
 
-            if(Character.toLowerCase(start)!=Character.toLowerCase(end)){
+            if(Character.toLowerCase(first)!=Character.toLowerCase(last)){
                 return false;
             }
             i++;
