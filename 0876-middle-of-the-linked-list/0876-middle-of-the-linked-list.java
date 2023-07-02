@@ -8,6 +8,8 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
+/* <New Soln.>
 class Solution {
     public ListNode middleNode(ListNode head) {
         ListNode slow = head, fast = head;
@@ -18,8 +20,9 @@ class Solution {
         return slow;
     }
 }
+*/
 
-/*class Solution {
+class Solution {
     public ListNode middleNode(ListNode head){
     
         int size = 0;
@@ -40,4 +43,3 @@ class Solution {
          return  node;   
     }
 }
-*/
