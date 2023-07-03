@@ -11,7 +11,7 @@
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         
-        ListNode head = new ListNode(0);
+        ListNode head = new ListNode();
         ListNode curr = head;
         
     while(list1 != null && list2 != null){
