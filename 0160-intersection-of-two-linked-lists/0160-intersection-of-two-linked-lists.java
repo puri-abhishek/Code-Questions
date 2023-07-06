@@ -14,7 +14,7 @@ public class Solution {
         
         ListNode temp1 = headA;
         ListNode temp2 = headB;
-        int i =0,j=0;
+        int i = 0, j = 0;
         
         while(temp1 != null){
             i++;
