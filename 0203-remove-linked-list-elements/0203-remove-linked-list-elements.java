@@ -9,7 +9,8 @@
  * }
  */
 class Solution {
-    public ListNode removeElements(ListNode head, int val) {
+    /*public ListNode removeElements(ListNode head, int val) {
+        
         if(head == null)
             return null;
         
@@ -25,4 +26,12 @@ class Solution {
         }
         return temp.next;
     }
+}
+*/
+public ListNode removeElements(ListNode head, int val) {
+        if (head == null) return null;
+        head.next = removeElements(head.next, val);
+        return head.val == val ? head.next : head;
+}
+    
 }
