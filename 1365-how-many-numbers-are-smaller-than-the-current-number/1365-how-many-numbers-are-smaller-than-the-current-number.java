@@ -1,4 +1,4 @@
-/*class Solution {
+class Solution {
     public int[] smallerNumbersThanCurrent(int[] nums) {
         
         int arr[] = new int[nums.length];
@@ -14,8 +14,9 @@
         }
         return arr;
     }
-}*/
+}
 
+/*<other method>
 class Solution {
     public int[] smallerNumbersThanCurrent(int[] nums) {
         int[] count = new int[101];
@@ -38,4 +39,4 @@ class Solution {
         
         return res;        
     }
-}
+}*/
