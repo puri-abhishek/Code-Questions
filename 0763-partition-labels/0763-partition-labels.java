@@ -18,7 +18,8 @@ class Solution {
                 arr.add(max - prev);
                 prev = max;
             }
-            
+            else
+                continue;
         }
         return arr;
     }
