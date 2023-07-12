@@ -1,4 +1,4 @@
-/*
+
 class Solution {
     public void reverseString(char[] s) {
         for(int i = 0; i < s.length / 2; i++)
@@ -9,7 +9,7 @@ class Solution {
         }
     }
 }
-*/
+
 
 /* <another approach but i dont think this matches the requirements>
 class Solution {
@@ -25,6 +25,7 @@ class Solution {
 }
 */
 
+/*
 class Solution {
     public void reverseString(char[] s) {
       int start=0;
@@ -36,3 +37,4 @@ class Solution {
         }  
     }
 }
+*/
