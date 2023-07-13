@@ -4,7 +4,7 @@ class Solution {
        
         while(start < end){
             int w = end - start;
-            int h = Math.min(height[start],height[end]);
+            int h = Math.min(height[start], height[end]);
             int area = w * h;
             max = Math.max(max, area);
             
