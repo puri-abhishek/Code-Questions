@@ -22,11 +22,11 @@ class Solution {
         int i = 0, j = 0;
         int max = 0;
         Map<Integer, Integer> b = new HashMap<>();
-        while (j < fruits.length) {
+        while(j < fruits.length){
             b.put(fruits[j], 1 + b.getOrDefault(fruits[j], 0));
-            while (b.size() > 2) {
+            if(b.size() > 2){
                 b.put(fruits[i], b.get(fruits[i]) - 1); 
-                if (b.get(fruits[i]) == 0) {    
+                if(b.get(fruits[i]) == 0){    
                     b.remove(fruits[i]);
                 }
                 i++;   
