@@ -26,9 +26,8 @@ class Solution {
           int[] arr = {-1, -1};
         
         int start = 0, end = nums.length - 1;
-        int mid = (start + end) / 2;
         while (start <= end) {
-            mid = (start + end) / 2;
+            int mid = start + (end - start) / 2;
             if (target == nums[mid]) {
                 arr[0] = mid;
                 end = mid - 1;
@@ -42,7 +41,7 @@ class Solution {
         start = 0;
         end = nums.length - 1;
         while (start <= end) {
-            mid = (start + end) / 2;
+            int mid = start + (end - start) / 2;
             if (target == nums[mid]) {
                 arr[1] = mid;
                 start = mid + 1;
