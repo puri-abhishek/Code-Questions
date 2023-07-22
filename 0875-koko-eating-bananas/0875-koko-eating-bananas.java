@@ -24,7 +24,7 @@ class Solution {
         int h = 0;
         for(int a : piles)
         {
-            h +=  Math.ceil((double)a / k);
+            h += Math.ceil((double)a / k);
         }
         return h;
     }
