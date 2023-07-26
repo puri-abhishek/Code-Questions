@@ -6,7 +6,6 @@ class Solution {
     }
     
     public void subseq(List<List<Integer>> arr , List<Integer> tempArr, int [] nums, int i){
-       
         if(i == nums.length)
         {
             arr.add(new ArrayList<>(tempArr));
