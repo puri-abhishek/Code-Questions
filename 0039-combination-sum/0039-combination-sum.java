@@ -1,25 +1,24 @@
 class Solution {
-    public void backTrack(List<List<Integer>> result,LinkedList<Integer> lst,int idx,int[] arr,int sum)
-    {
-        if(sum == 0)
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> arr = new ArrayList<>();
+        combo(arr, new ArrayList<>(), candidates, target, 0);
+        return arr;
+    }
+    
+    public void combo(List<List<Integer>> arr, List<Integer> tempArr, int[] candidates, int target, int index){
+        if(target == 0)
         {
-            result.add(new ArrayList(lst));
+            arr.add(new ArrayList<>(tempArr));
             return;
         }
-        for(int i = idx;i<arr.length;i++)
+        for(int i = index; i < candidates.length; i++)
         {
-            if(sum - arr[i] >=0)
+            if(target - candidates[i] >= 0)
             {
-                lst.add(arr[i]);
-                backTrack(result,lst,i,arr,sum-arr[i]);
-                lst.removeLast();
+                tempArr.add(candidates[i]);
+                combo(arr, tempArr, candidates, target - candidates[i], i);
+                tempArr.remove(tempArr.size() - 1);
             }
         }
-    }
-    public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> result = new ArrayList<>();
-        LinkedList<Integer> temp = new LinkedList<>();
-        backTrack(result,temp,0,candidates,target);
-        return result;
     }
 }
