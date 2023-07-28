@@ -10,7 +10,6 @@ class Solution {
     {
         if(target == 0)
         {
-            Collections.sort(tempArr);
             arr.add(new ArrayList<>(tempArr));
             return;
         }
