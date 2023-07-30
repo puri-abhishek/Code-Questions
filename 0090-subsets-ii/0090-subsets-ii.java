@@ -10,7 +10,7 @@ class Solution {
     {
         arr.add(new ArrayList<>(tempArr));
         for(int i = index; i < nums.length; i++ ){
-            if(i != index && nums[i] == nums[i - 1])
+            if(i > index && nums[i] == nums[i - 1])
                 continue;
             tempArr.add(nums[i]);
             subset2(arr, tempArr, nums, i + 1);
