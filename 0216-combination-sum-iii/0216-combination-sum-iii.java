@@ -7,6 +7,7 @@ class Solution {
     
     public void combo3(List<List<Integer>> arr, List<Integer> tempArr, int n, int k, int index)
     {
+    
         if(tempArr.size() == k && n == 0)
         {
             arr.add(new ArrayList<>(tempArr));
