@@ -34,7 +34,8 @@ class Solution {
     }
     public void reverse(int[] nums, int first, int last)
     {
-        while(first < last){
+        while(first < last)
+        {
             swap(nums, first, last);
             first++;
             last--;
