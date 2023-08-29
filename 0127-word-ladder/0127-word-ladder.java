@@ -13,7 +13,7 @@ class Solution {
         int change = 1;
         
         while(!queue.isEmpty()){
-            int size = queue.size();
+            int size = queue.size();//something wrong with leetcode's compiler coz this code works when i add this line.
             for(int i = 0; i < size; i++){
                 String word = queue.poll();
                 if(word.equals(endWord))
