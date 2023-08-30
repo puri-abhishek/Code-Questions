@@ -1,9 +1,9 @@
 class Solution {
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
-        List<List<Integer>> arr = new ArrayList<>();
-        boolean vis[] = new boolean[graph.length];
-        dfs(graph, 0, graph.length - 1, new ArrayList<>(), arr, vis);
-        return arr;
+        List<List<Integer>> result = new ArrayList<>();
+        boolean visited[] = new boolean[graph.length];
+        dfs(graph, 0, graph.length - 1, new ArrayList<>(), result, visited);
+        return result;
     }
     
     void dfs(int[][] graph, int currentNode, int targetNode, List<Integer> currentPath, List<List<Integer>> result, boolean[] visited) 
