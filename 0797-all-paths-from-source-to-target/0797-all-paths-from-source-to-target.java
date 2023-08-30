@@ -6,20 +6,28 @@ class Solution {
         return arr;
     }
     
-    void dfs(int [][]graph, int index, int length, List<Integer> tempArr, List<List<Integer>> arr, boolean []vis){
-        if(index == length){
-            tempArr.add(length);
-            arr.add(new ArrayList<>(tempArr));
-        }
-        else{
-            tempArr.add(index);
-            vis[index] = true;
-            for(int node : graph[index]){
-                if(vis[node] == false)
-                    dfs(graph, node, length, tempArr, arr, vis);
+    void dfs(int[][] graph, int currentNode, int targetNode, List<Integer> currentPath, List<List<Integer>> result, boolean[] visited) 
+    {
+        if (currentNode == targetNode)
+        {
+            currentPath.add(targetNode);
+            result.add(new ArrayList<>(currentPath));
+        } 
+        else 
+        {
+            currentPath.add(currentNode);
+            visited[currentNode] = true;
+
+            for (int neighbor : graph[currentNode]) 
+            {
+                if (!visited[neighbor]) 
+                {
+                    dfs(graph, neighbor, targetNode, currentPath, result, visited);
+                }
             }
         }
-        vis[index] = false;
-        tempArr.remove(tempArr.size() - 1);
+
+        visited[currentNode] = false;
+        currentPath.remove(currentPath.size() - 1);
     }
 }
