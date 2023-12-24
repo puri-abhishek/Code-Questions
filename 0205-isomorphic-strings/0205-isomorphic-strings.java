@@ -1,21 +1,17 @@
-import java.util.Hashtable;
 class Solution {
     public boolean isIsomorphic(String s, String t) {
-        Hashtable<Character , Character> hashtable = new Hashtable<>();
-        for (int i = 0; i < s.length(); i++) 
-        {
-            char c1 = s.charAt(i);
-            char c2 = t.charAt(i);
-            
-            if (hashtable.containsKey(c1))
-            {
-                if (hashtable.get(c1) != c2) return false;
-            }else {
-                if (hashtable.containsValue(c2)) return false;
-                hashtable.put(c1 , c2);
-            }
-        }
 
+        int map1[] = new int[127];
+        int map2[] = new int[127];
+
+        for(int i = 0; i < s.length(); i++)
+        {
+            if(map1[s.charAt(i)] != map2[t.charAt(i)])
+                return false;
+
+            map1[s.charAt(i)]=i+1;
+            map2[t.charAt(i)]=i+1;
+        }
         return true;
     }
 }
