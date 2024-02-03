@@ -30,8 +30,8 @@ class Solution {
             al.add(root.val);
             maxlvl = lvl;
         }
-        rightCheck(root.right, lvl+1, al);
-        rightCheck(root.left, lvl+1, al);
+        rightCheck(root.right, lvl + 1, al);
+        rightCheck(root.left, lvl + 1, al);
         
     }
 }
