@@ -21,7 +21,7 @@ class Solution {
         return al;
     }
     void rightCheck(TreeNode root, int lvl, List<Integer> al){
-        if(root==null)
+        if(root == null)
         {
             return;
         }
