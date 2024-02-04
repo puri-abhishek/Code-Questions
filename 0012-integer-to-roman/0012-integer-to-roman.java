@@ -1,4 +1,5 @@
-/*class Solution {
+/* (very slow)
+class Solution {
     public String intToRoman(int num) {
         String thou[] = {"","M","MM","MMM"};
         String hun[] = {"","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"};
