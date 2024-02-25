@@ -1,4 +1,4 @@
-/*
+/* <something's wrong with this>
 class Solution {
     public int removeDuplicates(int[] nums) {
         int flag=1,i=0,j=1;
