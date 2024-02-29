@@ -1,6 +1,6 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
-       /* if(s.length()!=t.length())
+        if(s.length()!=t.length())
             return false;
 
         int count[] = new int[26];
@@ -12,7 +12,8 @@ class Solution {
             if(freq!=0)
                 return false;
         }
-        return true;*/
+        return true;
+        /*
         if(s.length()!=t.length())
             return false;
         
@@ -40,6 +41,6 @@ class Solution {
                 return false;
             }
         }
-        return true;
+        return true;*/
     }
 }
