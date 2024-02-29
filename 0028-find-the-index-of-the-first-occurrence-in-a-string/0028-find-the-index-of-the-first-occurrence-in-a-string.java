@@ -5,7 +5,6 @@ class Solution {
         if(haystack.contains(needle))
         {
             ans=haystack.indexOf(needle);
-            
         }
         return ans;
     }
