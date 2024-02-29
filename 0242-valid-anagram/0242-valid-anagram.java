@@ -13,7 +13,7 @@ class Solution {
                 return false;
         }
         return true;
-        /*
+        /*<this is not fast enough>
         if(s.length()!=t.length())
             return false;
         
