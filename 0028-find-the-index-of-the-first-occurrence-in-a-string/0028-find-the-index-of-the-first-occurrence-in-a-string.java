@@ -4,8 +4,8 @@ class Solution {
         int ans=-1;
         if(haystack.contains(needle))
         {
-            int index=haystack.indexOf(needle);
-            ans=index;
+            ans=haystack.indexOf(needle);
+            
         }
         return ans;
     }
