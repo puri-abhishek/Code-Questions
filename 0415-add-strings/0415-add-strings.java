@@ -1,8 +1,7 @@
 class Solution {
     public String addStrings(String num1, String num2) {
-        int carry = 0;
         StringBuilder result = new StringBuilder();
-        
+        int carry = 0;
         int i = num1.length() - 1;
         int j = num2.length() - 1;
         
@@ -14,9 +13,9 @@ class Solution {
             carry = sum / 10;
             sum = sum % 10;
             
-            result.insert(0, sum);
+            result.append(sum);
         }
         
-        return result.toString();
+        return result.reverse().toString();
     }
 }
