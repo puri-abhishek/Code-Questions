@@ -7,8 +7,8 @@ class Solution {
             while(sum >= target)
             {
                 count = Math.min(count, i - l + 1);
-            sum -= nums[l];
-            l++;
+                sum -= nums[l];
+                l++;
             }
         }
         if(count != Integer.MAX_VALUE)
