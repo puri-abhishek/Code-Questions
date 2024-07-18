@@ -3,10 +3,10 @@ class Solution {
         if(s.length()!=t.length())
             return false;
 
-        int count[] = new int[26];
+        int count[] = new int[127];
         for(int i=0; i<s.length(); i++){
-            count[s.charAt(i)-'a']++;
-            count[t.charAt(i)-'a']--;
+            count[s.charAt(i)]++;
+            count[t.charAt(i)]--;
         }
         for(int freq : count){
             if(freq!=0)
