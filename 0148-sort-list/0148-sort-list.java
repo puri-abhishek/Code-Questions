@@ -17,7 +17,7 @@ class Solution {
     public ListNode mergeSort(ListNode head){
         if(head.next==null) return head;
         
-        ListNode mid=findMin(head);
+        ListNode mid=findMid(head);
         ListNode head2=mid.next;
         
         mid.next=null;
@@ -54,7 +54,7 @@ class Solution {
         }
         return comp.next;
     }
-    public ListNode findMin(ListNode head){
+    public ListNode findMid(ListNode head){
         ListNode slow=head;
         ListNode fast=head.next;
         
