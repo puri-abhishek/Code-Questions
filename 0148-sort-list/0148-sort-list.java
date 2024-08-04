@@ -35,11 +35,13 @@ class Solution {
             if(h1.val<h2.val){
                 tmp.next=h1;
                 h1=h1.next;
+                tmp=tmp.next;
             }else{
                 tmp.next=h2;
                 h2=h2.next;
+                tmp=tmp.next;
             }
-            tmp=tmp.next;
+            
         }
         
         while(h1!=null){
